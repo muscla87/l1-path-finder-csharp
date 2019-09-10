@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Claudio Musumeci</Authors>
+    <Company />
+    <PackageLicenseExpression>MIT License</PackageLicenseExpression>
+    <PackageId>L1PathFinder</PackageId>
+    <PackageProjectUrl>https://mikolalysenko.github.io/l1-path-finder/www/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/muscla87/l1-path-finder-csharp</RepositoryUrl>
+    <PackageReleaseNotes>C# porting of original l1-path-finder project (https://github.com/mikolalysenko/l1-path-finder)</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Contour.cs" />
+    <None Include="Geometry.cs" />
+    <None Include="Graph.cs" />
+    <None Include="L1PathPlanner.cs" />
+    <None Include="Vertex.cs" />
+  </ItemGroup>
+
+</Project>
