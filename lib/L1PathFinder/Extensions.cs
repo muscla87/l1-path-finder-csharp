@@ -31,21 +31,15 @@ namespace L1PathFinder
 
 			int[,] result = new int[w, h];
 
-			for (int x = 0; x < w; x++)
-			{
-				for (int y = 0; y < h; y++)
-				{
-					int sum = 0;
-					for (int xx = x; xx >= 0; xx--)
-					{
-						for (int yy = y; yy >= 0; yy--)
-						{
-							sum += matrix[xx, yy];
-						}
-					}
-					result[x, y] = sum;
-				}
-			}
+			result[0, 0] = matrix[0, 0];
+			for (int x = 1; x < w; x++)
+				result[x, 0] = matrix[x, 0] + result[x - 1, 0];
+			for (int y = 1; y < h; y++)
+				result[0, y] = matrix[0, y] + result[0, y-1];
+
+			for (int x = 1; x < w; x++)
+				for (int y = 1; y < h; y++)
+					result[x, y] = matrix[x, y] + result[x, y - 1]+ result[x-1, y] - result[x - 1, y-1];
 			return result;
 		}
 

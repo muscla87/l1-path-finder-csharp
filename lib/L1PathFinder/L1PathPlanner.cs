@@ -177,6 +177,7 @@ namespace L1PathFinder
                 else hi = m - 1;
             }
             if (comparer(list[lo], value) < 0) lo++;
+            if (lo >= list.Count) lo = -1;
             return lo;
         }
 
